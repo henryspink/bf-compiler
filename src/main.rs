@@ -14,15 +14,15 @@ fn main() {
         Commands::Compile(args) => {
             println!("Compiling file: {:?} {:?}", args.path, args);
             match compiler::compile(args) {
-                Ok(_) => println!("Compilation successful"),
-                Err(e) => println!("Compilation failed: {}", e),
+                Ok(_) => println!("\nCompilation successful"),
+                Err(e) => println!("\nCompilation failed: {}", e),
             }
         }
         Commands::Run(args) => {
             println!("Running file: {:?}", args.path);
             match interpreter::interpret(args) {
-                Ok(_) => println!("Interpretion successful"),
-                Err(e) => println!("Interpretation failed: {}", e),
+                Ok(_) => println!("\nInterpretion successful"),
+                Err(e) => println!("\nInterpretation failed: {}", e),
             }
         }
         Commands::Test(args) => {
